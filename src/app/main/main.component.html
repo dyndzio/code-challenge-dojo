@@ -1,0 +1,12 @@
+<div *ngIf="showData" class="tournament--data">
+  <h1>List of fixtures</h1>
+  <div class="tournament--data-list" *ngFor="let tournament of primary; let i = index" >
+    <div (click)="showAllData(i)">
+      {{tournament.start_time | date: "yyyy-MM-dd, HH:mm"}} - {{tournament.team1}} vs {{tournament.team2}} - {{tournament.championship}} |
+      <span class="same" *ngIf="tournament.same">This fixture from primary match the fixure from secondary</span>
+      <span  *ngIf="!tournament.same">This fixture from primary doesn't match the fixure from secondary</span>
+    </div>
+  </div>
+</div>
+
+<app-detailed *ngIf="!showData" [singleData]="singleData"></app-detailed>

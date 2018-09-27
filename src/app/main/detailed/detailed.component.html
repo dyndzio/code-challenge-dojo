@@ -1,0 +1,25 @@
+<h1>Details of a fixture</h1>
+<div class="detailed--data">
+    <div class="detailed--data-input-container">
+        <label for="team1">Team 1</label>
+        <input id="team1" type="text" [value]="singleData.team1">
+    </div>
+    <div class="detailed--data-input-container">
+        <label for="team2">Team 2</label>
+        <input id="team2" type="text" [value]="singleData.team2">
+    </div>
+    <div class="detailed--data-input-container">
+        <label for="sport">Sport</label>
+        <input id="sport" type="text" [value]="singleData.sport">
+    </div>
+    <div class="detailed--data-input-container">
+        <label for="championship">Championship</label>
+        <input id="championship" type="text" [value]="singleData.championship">
+    </div>
+    <div class="detailed--data-input-container">
+        <label for="start_time">Start time</label>
+        <input id="start_time" type="datetime-local" [value]="singleData.start_time | date:'yyyy-MM-ddTHH:mm'">
+    </div>
+    <div *ngIf="singleData.same">This fixture got a match in secondary.json</div>
+</div>
+<button (click)="goBack()">Go back to the list</button>

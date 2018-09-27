@@ -1,0 +1,24 @@
+.tournament {
+  &--data {
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    &-list {
+      cursor: pointer;
+      >div {
+        >span {
+          color: red;
+          &.same {
+            color: green;
+          }
+        }
+        &:hover {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
