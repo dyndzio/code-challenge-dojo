@@ -3,11 +3,11 @@
     font-size: 16px;
     line-height: 1.2;
     text-align: center;
-    width: 80%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     &-list {
       cursor: pointer;
-      >div {
+      margin: 5px 0;
         >span {
           color: red;
           &.same {
@@ -17,7 +17,6 @@
         &:hover {
           font-weight: bold;
         }
-      }
     }
   }
 }
