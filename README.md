@@ -22,11 +22,11 @@ Getting data from jsons also can be done in more than just one way. I decided to
 
 In my architecture we get data from json in app.component (In big project, this shouldn't happened this way) and we pass that data (after sorting) to main component. In main component 3 things happening:
 
-  1) Subscription to observe the changes of changes in 'subject' which is used to view change between child and parent.
+  1) Subscription to observe the changes of changes in `subject` which is used to view change between child and parent.
   2) Going thru all objects in primary.json and secondary.json and comparing if the strings are the same (whole object is converted into string for that comparition). If they are then there is an update of object to add to it new variable.
-  3) Function showAllData with parameter index that triggers on click on a <div class="tournament--data-list">. This function change the view and set the value of 'singleData' that is inputed into Detailed component.
+  3) Function showAllData with parameter index that triggers on click on a `<div class="tournament--data-list">`. This function change the view and set the value of 'singleData' that is inputed into Detailed component.
   
-Detailed component simple gets data from singleData and display all values of it as a value of inputs. Data is formated in a way that input type="datetime-local" can read. Also on that view we got a button with text: 'Go back to the list' this button send a new value of 'subject' so the view can go back to it previous state.
-Also there is one more thing going on here. If the 'singleData' contains a 'same' attribute it display an information that this fixture got a match in secondary.json
+Detailed component simple gets data from singleData and display all values of it as a value of inputs. Data is formated in a way that input type="datetime-local" can read. Also on that view we got a button with text: 'Go back to the list' this button send a new value of `subject` so the view can go back to it previous state.
+Also there is one more thing going on here. If the 'singleData' contains a `same` attribute it display an information that this fixture got a match in secondary.json
   
 
