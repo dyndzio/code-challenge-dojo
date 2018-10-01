@@ -1,8 +1,5 @@
-import {catchError, map} from 'rxjs/operators';
-import {throwError as observableThrowError,  Observable ,  Subject } from 'rxjs';
+import {  Observable ,  Subject } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { URLSearchParams } from '@angular/http';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 
 
